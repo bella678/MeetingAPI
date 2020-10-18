@@ -41,3 +41,8 @@ func (m *MeetingDAO) FindByID(id string) (Meetings, error) {
 	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&meeting)
 	return meeting, err
 }
+//Adding meeting
+func (m *MeetingDAO) Insert(meetings Meetings) error {
+	err := db.C(COLLECTION).Insert(&meetings)
+	return err
+}
