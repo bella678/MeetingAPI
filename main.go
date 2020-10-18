@@ -23,8 +23,8 @@ func scheduleMeetingEndPoint(w http.ResponseWriter, r *http.Request) {
 		responseWithError(w,http.StatusBadRequest,"Invalid Request PayLoad")
 		return
 	}
-	movie.ID=bson.NewObjectId()
-	if err:=da0.Insert(meeting);err!=nil{
+	meeting.ID=bson.NewObjectId()
+	if err:=dao.Insert(meeting);err!=nil{
 		respondWithError(w,http.StatusInternalServerError,err.Error())
 		return
 	}
