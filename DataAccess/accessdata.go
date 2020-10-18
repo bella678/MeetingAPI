@@ -42,7 +42,7 @@ func (m *MeetingDAO) FindByID(id string) (Meetings, error) {
 	return meeting, err
 }
 //Adding meeting
-func (m *MeetingDAO) Insert(meetings Meetings) error {
-	err := db.C(COLLECTION).Insert(&meetings)
+func (m *MeetingDAO) Insert(meeting Meetings) error {
+	err := db.C(COLLECTION).Insert(&meeting)
 	return err
 }
