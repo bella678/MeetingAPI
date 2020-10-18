@@ -7,7 +7,7 @@ type Meetings struct {
 		Title             string        `bson:"title" json:"title"`
 		Participats       []string      `bson:"participants" json:"participants"`
 		StartTime         string        `bson:"starttime" json:"starttime"`
-		EndTime           string        `bson:"end_time" json:"end_time"`
+		EndTime           string        `bson:"endtime" json:"endtime"`
 		CreationTimestamp string        `bson:"creationimestamp" json:"creationtimestamp"`
 	}
 
